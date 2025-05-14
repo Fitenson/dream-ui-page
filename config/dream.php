@@ -2,7 +2,7 @@
 return [
     // Theme for <x-dream-button>
     'button' => [
-        'primary' => 'bg-sky-700 dark:bg-sky-900 text-white hover:dark:bg-sky-600 focus:ring-4 focus:ring-sky-700',
+        'primary' => 'bg-orange-600 text-white hover:bg-orange-700 focus:ring-4 focus:ring-orange-300',
         'secondary' => 'bg-gray-100 text-gray-800 hover:bg-gray-200 focus:ring-4 focus:ring-gray-300',
         'danger' => 'bg-red-600 text-white hover:bg-red-700 focus:ring-4 focus:ring-red-300',
         'success' => 'bg-green-600 text-white hover:bg-green-700 focus:ring-4 focus:ring-green-300',

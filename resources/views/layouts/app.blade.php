@@ -12,7 +12,7 @@
 </head>
 <body class="text-gray-900 font-sans">
     {{-- Navigation --}}
-    <header id="site-header" class="fixed top-0 left-0 w-full z-50 bg-transparent text-black p-4 transition-colors duration-500 ease-in-out">
+    <header id="site-header" class="fixed top-0 left-0 w-full z-50 bg-transparent text-white font-bold text-3xl p-4 transition-colors duration-500 ease-in-out">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex flex-column">
                 <img src="{{ asset('logo.svg') }}" alt="Logo" class="h-16 w-16 object-scale-down" />
@@ -23,7 +23,7 @@
                 <a href="/" class="px-3 hover:underline">Home</a>
                 <a href="/docs" class="px-3 hover:underline">Docs</a>
                 <a href="/components" class="px-3 hover:underline">Components</a>
-                <a href="https://github.com/Fitenson/s-dream" class="px-3 hover:underline" target="_blank">GitHub</a>
+                <a href="https://github.com/Fitenson/dream" class="px-3 hover:underline" target="_blank">GitHub</a>
             </nav>
         </div>
     </header>

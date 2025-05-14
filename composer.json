@@ -77,7 +77,7 @@
         "repositories": [
         {
             "type": "path",
-            "url": "../dream",
+            "url": "../dream-ui",
             "options": {
                 "symlink": true
             }
