@@ -1,3 +1,4 @@
+{{-- resources/views/components/preview-canvas.blade.php --}}
 @props(['title' => null])
 
 <x-dream-card class="preview-canvas mb-6">
@@ -24,12 +25,12 @@
         </div>
 
         <div x-show="tab === 'preview'" class="mb-4">
-            @yield('preview')
+            {{ $preview }}
         </div>
 
         <div x-show="tab === 'code'">
             <pre class="bg-gray-100 p-4 rounded text-sm overflow-auto">
-<code class="language-html">@yield('code')</code>
+                <code class="language-html">{{ $code }}</code>
             </pre>
         </div>
     </div>
