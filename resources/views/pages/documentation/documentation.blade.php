@@ -15,9 +15,14 @@
 
         <nav class="px-4 py-2 space-y-2 text-sm">
             <a href="/docs/intro" class="block hover:text-sky-600 font-semibold text-sky-700">Getting Started</a>
-            <x-button type="link" to="/docs" class="block bg-gray-100 hover:bg-gray-200 text-left w-full">Introduction</x-button>
-            <x-button type="link" to="/docs/installation" class="block bg-gray-100 hover:bg-gray-200 text-left w-full">Installation</x-button>
-            <x-button type="link" to="/docs/components" class="block bg-gray-100 hover:bg-gray-200 text-left w-full">Components</x-button>
+            <x-dream-button onclick="showDocs('intro-docs')" class="block bg-gray-100 hover:bg-gray-200 text-left w-full">Introduction</x-dream-button>
+            <x-dream-button class="block bg-gray-100 hover:bg-gray-200 text-left w-full">Installation</x-dream-button>
+            <section class="flex flex-col space-y-2">
+                <x-dream-label class="text-gray-800 font-bold text-2xl sm:text-base md:text-xl" for="components">Components</x-dream-label>
+                <x-dream-button onclick="showDocs('button-docs')">Button</x-dream-button>
+                <x-dream-button onclick="showDocs('label-docs')">Label</x-dream-button>
+                <x-dream-button onclick="showDocs('input-docs')">Input</x-dream-button>
+            </section>
         </nav>
     </aside>
 
@@ -32,38 +37,19 @@
     </button>
 
     {{-- Main Content --}}
-    <main class="flex-1 ml-0 md:ml-64 px-6 py-10 bg-gray-50">
-        <div class="prose prose-sky max-w-4xl">
-            <p class="text-lg leading-relaxed">
-                Welcome to <strong>Dream UI</strong>! This guide will help you quickly understand how to use the library.
-            </p>
-
-            <h2 class="mt-8">Introduction</h2>
-            <p>
-                Dream UI is a Blade-based UI framework built to help you build Laravel apps faster with reusable components.
-            </p>
-
-            <h2 class="mt-8">Features</h2>
-            <ul class="list-disc list-inside">
-                <li>Pre-built components</li>
-                <li>Alpine.js integration</li>
-                <li>Tailwind CSS styling</li>
-                <li>Fast prototyping</li>
-            </ul>
-
-            <h2 class="mt-8">Requirements</h2>
-            <ul class="list-disc list-inside">
-                <li>Laravel 8+</li>
-                <li>Tailwind CSS</li>
-                <li>Node.js and npm</li>
-            </ul>
-
-            <h2 class="mt-8">Next Steps</h2>
-            <p>
-                Continue to the <a href="/docs/installation" class="text-sky-600 font-medium hover:underline">Installation</a> page to set up Dream UI in your project.
-            </p>
-        </div>
+    <main class="flex-1 py-10 bg-gray-50 mx-4 md:mx-16">
+        @include('partials.intro')
+        @include('partials.button_docs')
     </main>
 
 </div>
 @endsection
+<script>
+    function showDocs(id) {
+        // Hide all doc sections
+        document.querySelectorAll('section[id$="-docs"]').forEach(el => el.classList.add('hidden'));
+
+        // Show the selected doc
+        document.getElementById(id).classList.remove('hidden');
+    }
+</script>

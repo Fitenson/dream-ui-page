@@ -667,7 +667,7 @@
             "dist": {
                 "type": "path",
                 "url": "../dream-ui",
-                "reference": "d8c608727bac24fe0797b10792814d281dd00e9e"
+                "reference": "3b0acf965725c53e5f7ecb688617019fb9c6b581"
             },
             "require": {
                 "composer/installers": "^1.12",
