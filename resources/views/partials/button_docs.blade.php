@@ -11,19 +11,25 @@
         {{-- Layout: Main content centered, sidebar right --}}
         <section class="lg:flex lg:justify-center lg:items-start lg:gap-12 w-full">
             {{-- Main Content --}}
-            <div class="w-full lg:max-w-2xl space-y-8">
+            <div class="w-full space-y-8">
 <x-dream-tab-panel default="preview" class="bg-white rounded-xl border border-gray-200 shadow-sm">
     {{-- Tab Buttons --}}
-    <div class="px-6 pt-4">
-        <x-dream-tab-list class="inline-flex space-x-2">
-            <x-dream-tab-button name="preview"
-                active="bg-blue-600 text-white"
-                inactive="bg-white text-gray-800 border border-gray-200 hover:bg-gray-50">
+    <div class="px-6 pt-4 w-64">
+        <x-dream-tab-list class="inline-flex space-x-2 gap-4">
+            <x-dream-tab-button
+                class="px-3 py-1.5 text-sm rounded-md"
+                name="preview"
+                active="bg-black text-white"
+                inactive="bg-white text-gray-800 border border-gray-200"
+            >
                 Preview
             </x-dream-tab-button>
-            <x-dream-tab-button name="code"
-                active="bg-blue-600 text-white"
-                inactive="bg-white text-gray-800 border border-gray-200 hover:bg-gray-50">
+            <x-dream-tab-button
+                class="px-3 py-1.5 text-sm rounded-md text-center"
+                name="code"
+                active="bg-black text-white"
+                inactive="bg-white text-gray-800 border border-gray-200"
+            >
                 Code
             </x-dream-tab-button>
         </x-dream-tab-list>
@@ -34,7 +40,7 @@
         <x-dream.tabs.tab-section name="preview">
             <div class="flex space-x-4">
                 <x-dream-button class="bg-blue-600 text-white px-5 py-2.5 rounded-md shadow hover:bg-blue-700 transition">
-                    Click Me
+                    Button
                 </x-dream-button>
             </div>
         </x-dream.tabs.tab-section>
@@ -52,16 +58,22 @@
             </div>
 
             {{-- Right Sidebar --}}
-            <aside id="right-sidebar" class="mt-10 lg:mt-0 lg:w-64 shrink-0 sticky top-24 self-start hidden lg:block">
+            <aside
+                id="right-sidebar"
+                class="mt-10 lg:mt-0 lg:w-96 shrink-0 lg:block hidden self-start sticky top-24"
+            >
                 <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm space-y-4">
-                    <h4 class="text-sm font-semibold text-gray-900">On this page</h4>
-                    <ul class="text-sm text-gray-700 space-y-2">
-                        <li><a href="#usage" class="hover:text-blue-600">Usage</a></li>
-                        <li><a href="#examples" class="hover:text-blue-600">Examples</a>
+                    <h4 class="text-lg font-semibold text-gray-900">On this page</h4>
+                    <ul class="text-lg text-gray-700 space-y-2">
+                        <li>
+                            <a href="#usage" class="hover:text-blue-600">Usage</a>
+                        </li>
+                        <li>
+                            <a href="#examples" class="hover:text-blue-600 text-lg">Examples</a>
                             <ul class="pl-4 mt-1 list-disc text-gray-600 space-y-1">
-                                <li><a href="#sizes" class="hover:text-blue-500">Sizes</a></li>
-                                <li><a href="#variants" class="hover:text-blue-500">Variants</a></li>
-                                <li><a href="#states" class="hover:text-blue-500">States</a></li>
+                                <li><a href="#sizes" class="hover:text-blue-500 text-lg">Sizes</a></li>
+                                <li><a href="#variants" class="hover:text-blue-500 text-lg">Variants</a></li>
+                                <li><a href="#states" class="hover:text-blue-500 text-lg">States</a></li>
                             </ul>
                         </li>
                     </ul>

@@ -16,7 +16,7 @@
         <nav class="px-4 py-2 space-y-2 text-sm">
             <a href="/docs/intro" class="block hover:text-sky-600 font-semibold text-sky-700">Getting Started</a>
             <x-dream-button onclick="showDocs('intro-docs')" class="block bg-gray-100 hover:bg-gray-200 text-left w-full">Introduction</x-dream-button>
-            <x-dream-button class="block bg-gray-100 hover:bg-gray-200 text-left w-full">Installation</x-dream-button>
+            <x-dream-button onclick="showDocs('installation-docs')" class="block bg-gray-100 hover:bg-gray-200 text-left w-full">Installation</x-dream-button>
             <section class="flex flex-col space-y-2">
                 <x-dream-label class="text-gray-800 font-bold text-2xl sm:text-base md:text-xl" for="components">Components</x-dream-label>
                 <x-dream-button onclick="showDocs('button-docs')">Button</x-dream-button>
@@ -39,6 +39,7 @@
     {{-- Main Content --}}
     <main class="flex-1 py-10 bg-gray-50 mx-4">
         @include('partials.intro')
+        @include('partials.installation')
         @include('partials.button_docs')
     </main>
 
