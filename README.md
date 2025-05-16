@@ -18,24 +18,32 @@ Follow these steps to install and start using Dream UI in your Laravel project.
 Run the following command in your Laravel project root directory:
 
 - composer require fitenson/dream:dev-main
+
 Note: You may need to allow dev stability or set minimum-stability to dev in your composer.json.
+
 
 1. Publish Components
 Once installed, publish the Dream UI components using the Artisan command:
 
 - php artisan dream:install
+-
 This will publish the available Blade components to your project so you can begin using them immediately.
 
+
 ✨ Usage
-You can now use Dream UI components in your Blade templates. For example, to render a styled button:
+You can now use Dream UI components in your Blade templates.
+
 
 Dream UI components are designed to be flexible and Tailwind-compatible, allowing you to fully customize them via class attributes.
+
 
 📚 Documentation
 More detailed documentation is available in the official docs (coming soon).
 
+
 🤝 Contributing
 Contributions are welcome! If you’d like to improve or add new components, feel free to fork the repository and submit a pull request.
+
 
 📄 License
 Dream UI is open-source and licensed under the MIT License.
