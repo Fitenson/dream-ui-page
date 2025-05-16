@@ -1,4 +1,4 @@
-<section id="installation-docs" class="space-y-6">
+<div id="installation-docs" class="space-y-6">
     <div class="prose max-w-none">
         <h2 class="text-2xl font-bold text-gray-800">Installation</h2>
         <p>
@@ -25,7 +25,6 @@
 &lt;/x-dream-button&gt;
 </code>
     </div>
-
     <div>
         <x-dream-button onclick="showDocs('intro-docs')" class="bg-gray-800 text-white hover:bg-gray-700">
             ← Back to Introduction

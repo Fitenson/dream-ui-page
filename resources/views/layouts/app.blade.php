@@ -10,7 +10,7 @@
     {{-- ✅ Include Alpine.js globally --}}
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 </head>
-<body class="text-gray-900 font-sans">
+<body class="text-gray-900 font-sans overflow-x-hidden">
     {{-- Navigation --}}
     <header id="site-header" class="fixed top-0 left-0 w-full z-50 text-black font-bold text-xl p-4">
         <div class="container mx-auto flex justify-between items-center">

@@ -38,19 +38,42 @@
 
     {{-- Main Content --}}
     <main class="flex-1 py-10 bg-gray-50 mx-4">
-        @include('partials.intro')
-        @include('partials.installation')
-        @include('partials.button_docs')
+        <section id="intro-docs">
+            @include('partials.intro')
+        </section>
+
+        <section id="installation-docs" class="hidden">
+            @include('partials.installation')
+        </section>
+
+        <section id="button-docs" class="hidden">
+            @include('partials.button_docs')
+        </section>
+
+        {{-- <section id="label-docs" class="hidden">
+            @include('partials.label_docs')
+        </section>
+
+        <section id="input-docs" class="hidden">
+            @include('partials.input_docs')
+        </section> --}}
     </main>
 
 </div>
 @endsection
 <script>
-    function showDocs(id) {
-        // Hide all doc sections
-        document.querySelectorAll('section[id$="-docs"]').forEach(el => el.classList.add('hidden'));
+    document.addEventListener('DOMContentLoaded', function () {
+        window.showDocs = function (id) {
+            document.querySelectorAll('section[id]').forEach(el => {
+                el.classList.add('hidden');
+            });
 
-        // Show the selected doc
-        document.getElementById(id).classList.remove('hidden');
-    }
+            const target = document.getElementById(id);
+            if (target) {
+                target.classList.remove('hidden');
+            } else {
+                console.warn('Section not found:', id);
+            }
+        };
+    });
 </script>

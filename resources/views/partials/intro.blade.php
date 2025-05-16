@@ -1,4 +1,4 @@
-<section id="intro-docs" class="prose prose-sky max-w-4xl">
+<div id="intro-docs" class="prose prose-sky max-w-4xl">
     <p class="text-lg leading-relaxed">
         Welcome to <strong>Dream UI</strong>! This guide will help you quickly understand how to use the library.
     </p>
@@ -23,4 +23,4 @@
     <p>
         Continue to the <a href="/docs/installation" class="text-sky-600 font-medium hover:underline">Installation</a> page to set up Dream UI in your project.
     </p>
-</section>
+</div>
