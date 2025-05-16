@@ -37,7 +37,7 @@
     </button>
 
     {{-- Main Content --}}
-    <main class="flex-1 py-10 bg-gray-50 mx-4 md:mx-16">
+    <main class="flex-1 py-10 bg-gray-50 mx-4">
         @include('partials.intro')
         @include('partials.button_docs')
     </main>
